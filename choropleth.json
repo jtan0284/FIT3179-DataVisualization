@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Domestic Tourism Arrival 2023",
-  "width": 1000,
-  "height": 600,
+  "width": 600,
+  "height": 400,
   "projection": { "type": "equalEarth" },
   "data": {
     "url": "https://raw.githubusercontent.com/jtan0284/3179/refs/heads/main/Data%20Source/MalaysiaStatetopojson.json",
