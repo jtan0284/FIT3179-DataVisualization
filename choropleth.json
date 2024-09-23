@@ -1,14 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Domestic Tourism Arrival 2023",
-  "width": 800,
+  "width": 1000,
   "height": 600,
   "projection": { "type": "equalEarth" },
   "data": {
-    "url": "https://raw.githubusercontent.com/jtan0284/3179/refs/heads/main/Data%20Source/DomesticTourismArrival.csv",
+    "url": "https://raw.githubusercontent.com/jtan0284/3179/refs/heads/main/Data%20Source/MalaysiaStatetopojson.json",
     "format": {
       "type": "topojson",
-      "feature": "MalaysiaStatetopojson"
+      "feature": "mys_admbnda_adm1_unhcr_20210211"
     }
   },
   "transform": [
@@ -17,22 +17,22 @@
       "from": {
         "data": {
           "url": "https://raw.githubusercontent.com/jtan0284/3179/refs/heads/main/Data%20Source/DomesticTourismArrival.csv"
-        }
-      },
-      "key": "State",
-      "fields": ["Arrival"]
+        },
+        "key": "State",
+        "fields": ["Arrival"]
+      }
     }
   ],
   "mark": { "type": "geoshape" },
   "encoding": {
     "color": {
-      "field": "Domestic Arrivals",
+      "field": "Arrival",
       "type": "quantitative",
       "scale": { "type": "log" }
     },
     "tooltip": [
       { "field": "properties.ADM1_EN", "type": "nominal", "title": "State" },
-      { "field": "Arrival", "type": "quantitative" }
+      { "field": "Arrival", "type": "quantitative", "title": "Arrivals" }
     ]
   }
 }
