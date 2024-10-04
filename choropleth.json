@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Domestic Tourist Arrivals Malaysian States From 2016 to 2023",
+  "title": "Hotel Guests By State From 2016 to 2023",
   "width": "container",
   "height": 400,
   "params": [
@@ -90,7 +90,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/jtan0284/3179/refs/heads/main/Data%20Source/DomesticTourismArrival.csv"
+        "url": "https://raw.githubusercontent.com/jtan0284/3179/refs/heads/main/Data%20Source/HotelGuestByState.csv"
       },
       "transform": [
         {
