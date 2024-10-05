@@ -10,10 +10,10 @@
   </head>
   <body>
     <div id="choropleth_map"></div>
-    <div id="bar_line_chart"></div>
+    <div id="choropleth_world_map"></div>
     <script type="text/javascript">
       var vg1 = "Visualization/choropleth.json";
-      var vg2 = "Visualization/barline.json";
+      var vg2 = "Visualization/choroplethworld.json";
 
       vegaEmbed("#choropleth_map", vg1)
         .then(function (result) {
@@ -21,7 +21,7 @@
         })
         .catch(console.error);
 
-      vegaEmbed("#bar_line_chart", vg2)
+      vegaEmbed("#choropleth_world_map", vg2)
         .then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         })
