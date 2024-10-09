@@ -1,0 +1,163 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 278,
+  "height": 400,
+  "params": [
+    {
+      "name": "Year_selection",
+      "value": 2019,
+      "bind": {
+        "input": "range",
+        "min": 2016,
+        "max": 2023,
+        "step": 1,
+        "name": "Year: "
+      }
+    },
+    {
+      "name": "zoom_level",
+      "value": 3000,
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 5000,
+        "step": 10,
+        "name": "Zoom: "
+      }
+    },
+    {
+      "name": "center_to",
+      "value": [102, 4],
+      "bind": {
+        "input": "select",
+        "options": [
+          [102, 4],
+          [115, 4]
+        ],
+        "labels": ["West Malaysia", "East Malaysia"],
+        "name": "Map Centre: "
+      }
+    }
+  ],
+  "projection": {
+    "type": "equalEarth",
+    "center": {
+      "expr": "center_to"
+    },
+    "scale": {
+      "expr": "zoom_level"
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jtan0284/3179/refs/heads/main/Data%20Source/MalaysiaStatetopojson.json",
+        "format": {
+          "type": "topojson",
+          "feature": "mys_admbnda_adm1_unhcr_20210211"
+        }
+      },
+      "transform": [
+        {
+          "calculate": "'Data is not available'",
+          "as": "note"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ddd",
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "tooltip": {
+          "field": "note"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jtan0284/3179/refs/heads/main/Data%20Source/HotelGuestByState.csv"
+      },
+      "transform": [
+        {
+          "lookup": "State",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/jtan0284/3179/refs/heads/main/Data%20Source/MalaysiaStatetopojson.json",
+              "format": {
+                "type": "topojson",
+                "feature": "mys_admbnda_adm1_unhcr_20210211"
+              }
+            },
+            "key": "properties.ADM1_EN"
+          },
+          "as": "geo"
+        },
+        {
+          "filter": "datum.Year == Year_selection"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#fff",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "shape": {
+          "field": "geo",
+          "type": "geojson"
+        },
+        "color": {
+          "field": "ArrivalsPerKM2",
+          "type": "quantitative",
+          "scale": {
+            "type": "log",
+            "scheme": "blues"
+          },
+          "title": "Arrivals per KM2"
+        },
+        "tooltip": [
+          {
+            "field": "State",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "Arrivals",
+            "type": "quantitative",
+            "title": "Arrivals",
+            "format": ","
+          },
+          {
+            "field": "Area(KM2)",
+            "type": "quantitative",
+            "title": "Area(KM2)",
+            "format": ","
+          },
+          {
+            "field": "ArrivalsPerKM2",
+            "type": "quantitative",
+            "title": "Arrivals per KM2",
+            "format": ",.2f"
+          },
+          {
+            "field": "Year",
+            "type": "quantitative",
+            "title": "Year"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "axis": {
+      "labelFont": "Lato",
+      "titleFont": "Lato"
+    },
+    "legend": {
+      "labelFont": "Lato",
+      "titleFont": "Lato"
+    }
+  }
+}

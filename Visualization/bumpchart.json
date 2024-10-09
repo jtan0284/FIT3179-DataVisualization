@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 640,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jtan0284/3179/refs/heads/main/Data%20Source/ExpenditureComponents.csv"
+  },
+  "mark": {
+    "type": "line",
+    "orient": "vertical",
+    "point": true,
+    "tooltip": true
+  },
+  "encoding": {
+    "x": { "field": "Year", "type": "ordinal" },
+    "y": {
+      "field": "Rank",
+      "type": "quantitative",
+      "scale": { "reverse": true }
+    },
+    "order": { "field": "Items", "type": "nominal" },
+    "color": {
+      "field": "Items",
+      "type": "nominal",
+      "scale": {
+        "scheme": "category20"
+      }
+    },
+    "tooltip": [
+      { "field": "Items", "type": "nominal", "title": "Item" },
+      { "field": "Rank", "type": "quantitative", "title": "Rank" },
+      {
+        "field": "Percentage",
+        "type": "quantitative",
+        "title": "Percentage (%)"
+      },
+      {
+        "field": "RM(mil)",
+        "type": "quantitative",
+        "title": "Expenditure (RM mil)"
+      },
+      { "field": "Year", "type": "ordinal", "title": "Year" }
+    ]
+  },
+  "config": {
+    "axis": {
+      "labelFont": "Lato",
+      "titleFont": "Lato"
+    },
+    "legend": {
+      "labelFont": "Lato",
+      "titleFont": "Lato"
+    }
+  }
+}

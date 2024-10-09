@@ -1,0 +1,100 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 265,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jtan0284/3179/refs/heads/main/Data%20Source/ModeOfTransport.csv"
+  },
+  "params": [
+    {
+      "name": "Year_selection",
+      "value": 2016,
+      "bind": {
+        "input": "range",
+        "min": 2016,
+        "max": 2023,
+        "step": 1,
+        "name": "Year: "
+      }
+    },
+    {
+      "name": "select",
+      "select": {
+        "type": "point",
+        "on": "mouseover",
+        "fields": ["Transportation"],
+        "clear": "mouseout"
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.Year == Year_selection"
+    }
+  ],
+
+  "mark": {
+    "type": "arc",
+    "stroke": "white",
+    "strokeWidth": 0.1,
+    "cursor": "pointer",
+    "padAngle": {
+      "expr": "select.Transportation == datum.Transportation ? 0.01 : 0"
+    },
+    "radius": {
+      "expr": "select.Transportation == datum.Transportation ? 155: 150"
+    },
+    "radius2": {
+      "expr": "select.Transportation == datum.Transportation ? 3: 0"
+    },
+    "cornerRadius": {
+      "expr": "select.Transportation == datum.Transportation ? 3: 0"
+    }
+  },
+  "encoding": {
+    "theta": {
+      "field": "TouristArrival",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "Transportation",
+      "type": "nominal"
+    },
+    "fillOpacity": {
+      "condition": { "param": "select", "value": 1 },
+      "value": 0.4
+    },
+    "strokeWidth": {
+      "condition": { "param": "select", "empty": false, "value": 3 },
+      "value": 0.5
+    },
+    "tooltip": [
+      {
+        "field": "Transportation",
+        "type": "nominal",
+        "title": "Transportation Mode"
+      },
+      {
+        "field": "TouristArrival",
+        "type": "quantitative",
+        "title": "Tourist Arrivals",
+        "format": ","
+      },
+      {
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year"
+      }
+    ]
+  },
+  "config": {
+    "axis": {
+      "labelFont": "Lato",
+      "titleFont": "Lato"
+    },
+    "legend": {
+      "labelFont": "Lato",
+      "titleFont": "Lato"
+    }
+  }
+}

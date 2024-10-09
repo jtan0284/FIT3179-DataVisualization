@@ -1,0 +1,105 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 320,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jtan0284/3179/refs/heads/main/Data%20Source/TouristArrivals%26Receipts.csv"
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year"
+    }
+  },
+  "layer": [
+    {
+      "mark": { "type": "bar", "width": { "band": 0.7 } },
+      "encoding": {
+        "y": {
+          "field": "TouristArrivals",
+          "type": "quantitative",
+          "title": "Tourist Arrivals",
+          "axis": {
+            "labelExpr": "datum.value / 1000000 + 'M'"
+          }
+        },
+        "tooltip": [
+          { "field": "Year", "type": "ordinal", "title": "Year" },
+          {
+            "field": "TouristArrivals",
+            "type": "quantitative",
+            "title": "Tourist Arrivals",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#E45756",
+        "point": { "color": "#E45756" }
+      },
+      "encoding": {
+        "y": {
+          "field": "Receipts(RM)Million",
+          "type": "quantitative",
+          "title": "Receipts (RM Million)"
+        },
+        "tooltip": [
+          { "field": "Year", "type": "ordinal", "title": "Year" },
+          {
+            "field": "Receipts(RM)Million",
+            "type": "quantitative",
+            "title": "Receipts (RM Million)",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dy": 270,
+        "dx": 25,
+        "fontSize": 12,
+        "fontStyle": "italic",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "datum": 0,
+          "type": "quantitative"
+        },
+        "text": {
+          "datum": "COVID-19"
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum['Year'] == '2020'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "y": "independent"
+    }
+  },
+  "config": {
+    "axis": {
+      "labelFont": "Lato",
+      "titleFont": "Lato"
+    },
+    "legend": {
+      "labelFont": "Lato",
+      "titleFont": "Lato"
+    }
+  }
+}
