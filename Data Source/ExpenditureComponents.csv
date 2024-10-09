@@ -1,97 +1,97 @@
 Items,Year,Percentage,RM(mil),Rank
-Shopping,2023,33.9,24173.6,1
-Accomodation,2023,18.8,13406,2
-F&B,2023,14.9,10625,3
-Local Transport,2023,6.4,4563.7,5
-Organised Tour,2023,4.4,3137.6,7
-International Airlines (Local),2023,9.3,6631.7,4
-Entertainment,2023,3.7,2638.4,8
-Medical,2023,4.9,3494.1,6
-Domestic Airfares,2023,2.3,1640.1,9
-Fuel,2023,1,713.1,10
-Sports,2023,0.1,71.3,12
-Others,2023,0.3,213.9,11
-Shopping,2022,38.6,10755,1
-Accomodation,2022,16.8,4714.1,2
-F&B,2022,15.8,4403.6,3
-Local Transport,2022,5.4,1524.3,5
-Organised Tour,2022,2.5,705.7,8
-International Airlines (Local),2022,7.3,2032.4,4
-Entertainment,2022,4.1,1129.1,7
-Medical,2022,4.4,1213.8,6
-Domestic Airfares,2022,0.9,254.1,11
-Fuel,2022,1.1,310.5,10
-Sports,2022,0.3,84.7,12
-Others,2022,4,1100.9,9
-Shopping,2021,1,2.4,5
-Accomodation,2021,30.4,72.5,1
-F&B,2021,30.4,72.5,2
-Local Transport,2021,6.1,2.5,4
-Organised Tour,2021,0,0,12
-International Airlines (Local),2021,29.8,71.1,3
-Entertainment,2021,1,2.4,7
-Medical,2021,1,2.4,6
-Domestic Airfares,2021,1,2.4,10
-Fuel,2021,1,2.4,9
-Sports,2021,1,2.4,12
-Others,2021,1,2.4,8
-Shopping,2020,35.4,4488.9,1
-Accomodation,2020,23.4,2964.7,2
-F&B,2020,14.6,1852.7,3
-Local Transport,2020,7.3,920.5,4
-Organised Tour,2020,4.7,602.4,5
-International Airlines (Local),2020,4.5,577.3,6
-Entertainment,2020,4.5,564.7,7
-Medical,2020,2.8,351.4,8
-Domestic Airfares,2020,1.4,175.7,9
-Fuel,2020,0.2,22.8,11
-Sports,2020,0,0,12
-Others,2020,1.3,167.6,10
-Shopping,2019,33.6,28944.2,1
-Accomodation,2019,24,20674.4,2
-F&B,2019,13.3,11457.1,3
-Local Transport,2019,7.6,6546.9,4
-Organised Tour,2019,6.3,5247.0 ,5
-International Airlines (Local),2019,4.9,4221.0 ,6
-Entertainment,2019,3.4,2928.9,7
-Medical,2019,3.4,2928.8,8
-Domestic Airfares,2019,2.6,2239.7,9
-Fuel,2019,0.3,258.4,11
-Sports,2019,0.2,172.3,12
-Others,2019,0.4,344.6,10
-Shopping,2018,33.4,28101.2,1
-Accomodation,2018,25.7,21622.7,2
-F&B,2018,13.4,11274.1,3
-Local Transport,2018,6.1,5132.2,4
-Organised Tour,2018,4.4,3701.9,6
-International Airlines (Local),2018,4.5,3786.1,5
-Entertainment,2018,3.6,3028.9,7
-Medical,2018,3.4,2860.6,8
-Domestic Airfares,2018,3,2524.1,9
-Fuel,2018,0.7,588.9,11
-Sports,2018,0.3,252.4,12
-Others,2018,1.5,1262,10
-Shopping,2017,32.7,26868,1
-Accomodation,2017,25.6,21034.2,2
-F&B,2017,13.3,10927.9,3
-Local Transport,2017,5.8,4765.6,4
-Organised Tour,2017,4.9,4026.1,5
-International Airlines (Local),2017,4.1,3368.8,6
-Entertainment,2017,3.9,3204.4,7
-Medical,2017,3.7,3040.1,8
-Domestic Airfares,2017,3.2,2629.3,9
-Fuel,2017,0.7,575.2,11
-Sports,2017,0.3,246.5,12
-Others,2017,1.8,1497,10
-Shopping,2016,31.7,26025.1,1
-Accomodation,2016,24.9,20442.5,2
-F&B,2016,13.1,10754.9,3
-Local Transport,2016,6.6,5418.5,4
-Organised Tour,2016,5.4,4433.3,5
-International Airlines (Local),2016,4.4,3612.3,6
-Entertainment,2016,3.9,3201.8,7
-Medical,2016,3.6,2955.5,8
-Domestic Airfares,2016,3.1,2545,9
-Fuel,2016,0.8,656.8,11
-Sports,2016,0.3,246.3,12
-Others,2016,2.2,1806.2,10
+Shopping,2023,33.9,24173.6,0
+Accomodation,2023,18.8,13406,1
+F&B,2023,14.9,10625,2
+Local Transport,2023,6.4,4563.7,4
+Organised Tour,2023,4.4,3137.6,6
+International Airlines (Local),2023,9.3,6631.7,3
+Entertainment,2023,3.7,2638.4,7
+Medical,2023,4.9,3494.1,5
+Domestic Airfares,2023,2.3,1640.1,8
+Fuel,2023,1,713.1,9
+Sports,2023,0.1,71.3,11
+Others,2023,0.3,213.9,10
+Shopping,2022,38.6,10755,0
+Accomodation,2022,16.8,4714.1,1
+F&B,2022,15.8,4403.6,2
+Local Transport,2022,5.4,1524.3,4
+Organised Tour,2022,2.5,705.7,7
+International Airlines (Local),2022,7.3,2032.4,3
+Entertainment,2022,4.1,1129.1,6
+Medical,2022,4.4,1213.8,5
+Domestic Airfares,2022,0.9,254.1,10
+Fuel,2022,1.1,310.5,9
+Sports,2022,0.3,84.7,11
+Others,2022,4,1100.9,8
+Shopping,2021,1,2.4,4
+Accomodation,2021,30.4,72.5,0
+F&B,2021,30.4,72.5,1
+Local Transport,2021,6.1,2.5,3
+Organised Tour,2021,0,0,11
+International Airlines (Local),2021,29.8,71.1,2
+Entertainment,2021,1,2.4,6
+Medical,2021,1,2.4,5
+Domestic Airfares,2021,1,2.4,9
+Fuel,2021,1,2.4,8
+Sports,2021,1,2.4,11
+Others,2021,1,2.4,7
+Shopping,2020,35.4,4488.9,0
+Accomodation,2020,23.4,2964.7,1
+F&B,2020,14.6,1852.7,2
+Local Transport,2020,7.3,920.5,3
+Organised Tour,2020,4.7,602.4,4
+International Airlines (Local),2020,4.5,577.3,5
+Entertainment,2020,4.5,564.7,6
+Medical,2020,2.8,351.4,7
+Domestic Airfares,2020,1.4,175.7,8
+Fuel,2020,0.2,22.8,10
+Sports,2020,0,0,11
+Others,2020,1.3,167.6,9
+Shopping,2019,33.6,28944.2,0
+Accomodation,2019,24,20674.4,1
+F&B,2019,13.3,11457.1,2
+Local Transport,2019,7.6,6546.9,3
+Organised Tour,2019,6.3,5247.0 ,4
+International Airlines (Local),2019,4.9,4221.0 ,5
+Entertainment,2019,3.4,2928.9,6
+Medical,2019,3.4,2928.8,7
+Domestic Airfares,2019,2.6,2239.7,8
+Fuel,2019,0.3,258.4,10
+Sports,2019,0.2,172.3,11
+Others,2019,0.4,344.6,9
+Shopping,2018,33.4,28101.2,0
+Accomodation,2018,25.7,21622.7,1
+F&B,2018,13.4,11274.1,2
+Local Transport,2018,6.1,5132.2,3
+Organised Tour,2018,4.4,3701.9,5
+International Airlines (Local),2018,4.5,3786.1,4
+Entertainment,2018,3.6,3028.9,6
+Medical,2018,3.4,2860.6,7
+Domestic Airfares,2018,3,2524.1,8
+Fuel,2018,0.7,588.9,10
+Sports,2018,0.3,252.4,11
+Others,2018,1.5,1262,9
+Shopping,2017,32.7,26868,0
+Accomodation,2017,25.6,21034.2,1
+F&B,2017,13.3,10927.9,2
+Local Transport,2017,5.8,4765.6,3
+Organised Tour,2017,4.9,4026.1,4
+International Airlines (Local),2017,4.1,3368.8,5
+Entertainment,2017,3.9,3204.4,6
+Medical,2017,3.7,3040.1,7
+Domestic Airfares,2017,3.2,2629.3,8
+Fuel,2017,0.7,575.2,10
+Sports,2017,0.3,246.5,11
+Others,2017,1.8,1497,9
+Shopping,2016,31.7,26025.1,0
+Accomodation,2016,24.9,20442.5,1
+F&B,2016,13.1,10754.9,2
+Local Transport,2016,6.6,5418.5,3
+Organised Tour,2016,5.4,4433.3,4
+International Airlines (Local),2016,4.4,3612.3,5
+Entertainment,2016,3.9,3201.8,6
+Medical,2016,3.6,2955.5,7
+Domestic Airfares,2016,3.1,2545,8
+Fuel,2016,0.8,656.8,10
+Sports,2016,0.3,246.3,11
+Others,2016,2.2,1806.2,9
