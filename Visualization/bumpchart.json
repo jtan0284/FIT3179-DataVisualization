@@ -1,47 +1,96 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 640,
+  "width": 600,
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/jtan0284/3179/refs/heads/main/Data%20Source/ExpenditureComponents.csv"
   },
+  "params": [
+    {
+      "name": "Items",
+      "select": { "type": "point", "fields": ["Items"] },
+      "bind": "legend"
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "toNumber(datum['Rank'])",
+      "as": "Rank"
+    },
+    {
+      "window": [{ "op": "rank", "as": "rank" }],
+      "sort": [{ "field": "Rank", "order": "ascending" }],
+      "groupby": ["Year"]
+    }
+  ],
   "mark": {
     "type": "line",
-    "orient": "vertical",
-    "point": true,
-    "tooltip": true
+    "point": { "filled": true, "size": 80 }
   },
   "encoding": {
-    "x": { "field": "Year", "type": "ordinal" },
+    "x": { "field": "Year", "type": "ordinal", "axis": { "labelAngle": 0 } },
     "y": {
-      "field": "Rank",
-      "type": "quantitative",
-      "scale": { "reverse": true }
+      "field": "rank",
+      "type": "ordinal",
+      "sort": "ascending",
+      "title": "Rank"
     },
-    "order": { "field": "Items", "type": "nominal" },
     "color": {
       "field": "Items",
       "type": "nominal",
       "scale": {
-        "scheme": "category20"
+        "domain": [
+          "Accomodation",
+          "Domestic Airfares",
+          "Entertainment",
+          "F&B",
+          "Fuel",
+          "International Airlines (Local)",
+          "Local Transport",
+          "Medical",
+          "Organised Tour",
+          "Others",
+          "Shopping",
+          "Sports"
+        ],
+        "range": [
+          "#1f77b4 ",
+          "#ff7f0e  ",
+          "#9467bd",
+          "#c5b0d5",
+          "#e377c2",
+          "#17becf",
+          "#bcbd22",
+          "#7f7f7f",
+          "#ffbb78",
+          "#aec7e8",
+          "#8c564b",
+          "#f7b6d2"
+        ]
       }
+    },
+    "opacity": {
+      "condition": { "param": "Items", "value": 1 },
+      "value": 0.1
     },
     "tooltip": [
       { "field": "Items", "type": "nominal", "title": "Item" },
       { "field": "Rank", "type": "quantitative", "title": "Rank" },
       {
         "field": "Percentage",
-        "type": "quantitative",
+        "type": "nominal",
         "title": "Percentage (%)"
       },
       {
         "field": "RM(mil)",
         "type": "quantitative",
-        "title": "Expenditure (RM mil)"
+        "title": "Expenditure (mil)",
+        "format": ","
       },
       { "field": "Year", "type": "ordinal", "title": "Year" }
     ]
   },
+
   "config": {
     "axis": {
       "labelFont": "Lato",
