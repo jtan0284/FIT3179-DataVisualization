@@ -38,6 +38,7 @@
     "stroke": "white",
     "strokeWidth": 0.1,
     "cursor": "pointer",
+    "innerRadius": 80,
     "padAngle": {
       "expr": "select.Transportation == datum.Transportation ? 0.01 : 0"
     },
@@ -58,7 +59,11 @@
     },
     "color": {
       "field": "Transportation",
-      "type": "nominal"
+      "type": "nominal",
+      "scale": {
+        "domain": ["Air", "Land", "Rail", "Sea"],
+        "range": ["#ff7f0e", "#1f77b4", "#9467bd", "#8c564b"]
+      }
     },
     "fillOpacity": {
       "condition": { "param": "select", "value": 1 },
@@ -72,7 +77,7 @@
       {
         "field": "Transportation",
         "type": "nominal",
-        "title": "Transportation Mode"
+        "title": "Transportation"
       },
       {
         "field": "TouristArrival",
