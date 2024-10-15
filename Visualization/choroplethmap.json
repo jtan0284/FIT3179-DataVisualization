@@ -4,19 +4,8 @@
   "height": 400,
   "params": [
     {
-      "name": "Year_selection",
-      "value": 2019,
-      "bind": {
-        "input": "range",
-        "min": 2016,
-        "max": 2023,
-        "step": 1,
-        "name": "Year: "
-      }
-    },
-    {
       "name": "zoom_level",
-      "value": 3000,
+      "value": 3700,
       "bind": {
         "input": "range",
         "min": 2000,
@@ -81,6 +70,9 @@
       },
       "transform": [
         {
+          "filter": "datum.Year == 2023"
+        },
+        {
           "lookup": "State",
           "from": {
             "data": {
@@ -93,9 +85,6 @@
             "key": "properties.ADM1_EN"
           },
           "as": "geo"
-        },
-        {
-          "filter": "datum.Year == Year_selection"
         }
       ],
       "mark": {
