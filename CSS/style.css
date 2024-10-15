@@ -1,14 +1,15 @@
 * {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  line-height: 1.5;
+  font-size: 19px;
+  line-height: 1.8;
   margin: 0;
   padding: 0;
 }
 
 b {
   font-weight: 700;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .title h1 {
@@ -31,7 +32,7 @@ body {
   padding-top: 35px;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .container section {
@@ -58,7 +59,7 @@ body {
 
 .vis-section-1 h2 {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
@@ -80,7 +81,7 @@ body {
 
 .vis-section-2 .vis-description h2 {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
@@ -94,13 +95,13 @@ body {
 
 .vis-section-3 h2 {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
 .vis-section-4 h2 {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 .vis-section-4 .vis-container {
@@ -109,10 +110,28 @@ body {
 
 .vis-section-5 h2 {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
 .vis-section-5 .vis-container {
   margin-right: 20px;
+}
+
+.meta_data {
+  margin-top: 80px;
+  align-items: flex-start;
+}
+
+.meta_data {
+  font-size: 15px;
+}
+
+a {
+  color: #0062ff;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0062ff;
 }
