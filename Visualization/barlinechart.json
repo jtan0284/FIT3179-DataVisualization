@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
   "width": 320,
-  "height": 300,
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/jtan0284/3179/refs/heads/main/Data%20Source/TouristArrivals%26Receipts.csv"
   },
@@ -63,7 +63,7 @@
       "mark": {
         "type": "text",
         "align": "center",
-        "dy": 270,
+        "dy": 370,
         "dx": 25,
         "fontSize": 12,
         "fontStyle": "italic",
